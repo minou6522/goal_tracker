@@ -1,1 +1,63 @@
-hello
+<html>
+<head>
+
+ <title>Swim Tracker</title>
+ </head>
+ <body>
+ <h1>Swim Tracker</h1>
+ 
+ 
+
+<form>
+<div>EVENTS:<select name="Events">
+  <option value="free50">50 free</option>
+  <option value="free100">100 free</option>
+  <option value="free200">200 free</option>
+  <option value="free400">400 free</option>
+   <option value="free800">800 free</option>
+   <option value="free1500">1500 free</option>
+</select></div>
+ <div> YOUR TIME: <input type="text" name="timeOriginal"><br></div>
+  <div>YOUR GOAL: <input type="text" name="timeGoal"><br>
+    <div>Courses:<select name="Courses">
+  <option value="longCourse">Long Course</option>
+  <option value="shortCourse">Short Course </option>
+  
+  
+  
+  <input type="submit" value="Submit">
+
+</div>
+</form></div>
+
+
+<h3>Time Diference:</h3>
+<h3 id = 'timeDiference'></h3>
+</div>
+
+<script>
+function formParse(event) {
+event.preventDefault() 
+var element = event.target
+console.log(element)
+console.log(element.timeOriginal.value)
+var timeOriginal = (element.timeOriginal.value)
+var timeGoal = (element.timeGoal.value)
+
+
+var timeDiference = timeOriginal - timeGoal
+console.log(timeDiference)
+var displayTime = document.querySelector('#timeDiference')
+displayTime.innerHTML = timeDiference
+}
+var form = document.querySelector("form")
+console.log(form)
+
+form.addEventListener("submit", formParse);
+</script>
+
+
+
+
+ </body>
+ </html>
