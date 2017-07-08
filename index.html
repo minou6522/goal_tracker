@@ -36,19 +36,19 @@
 </div>
 
 <script>
-function formParse(event) {
-event.preventDefault() 
-var element = event.target
-console.log(element)
-console.log(element.timeOriginal.value)
-var timeOriginal = (element.timeOriginal.value)
-var timeGoal = (element.timeGoal.value)
+function formParse(event){
+	event.preventDefault() 
+	var element = event.target
+	console.log(element)
+	console.log(element.timeOriginal.value)
+	var timeOriginal = (element.timeOriginal.value)
+	var timeGoal = (element.timeGoal.value)
 
 
-var timeDiference = timeOriginal - timeGoal
-console.log(timeDiference)
-var displayTime = document.querySelector('#timeDiference')
-displayTime.innerHTML = timeDiference
+	var timeDiference = timeOriginal - timeGoal
+	console.log(timeDiference)
+	var displayTime = document.querySelector('#timeDiference')
+	displayTime.innerHTML = timeDiference
 }
 var form = document.querySelector("form")
 console.log(form)
