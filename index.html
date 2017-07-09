@@ -9,16 +9,50 @@
  
 
 <form>
-<div>EVENTS:<select name="Events">
-  <option value="free50">50 free</option>
-  <option value="free100">100 free</option>
-  <option value="free200">200 free</option>
-  <option value="free400">400 free</option>
-   <option value="free800">800 free</option>
-   <option value="free1500">1500 free</option>
+<div><h4>Events:</h4><select name="Events">
+  <option value="free50">50 freestyle</option> //free
+  <option value="free100">100 freestyle</option>
+  <option value="free200">200 freestyle</option>
+  <option value="free400">400 freestyle</option>
+   <option value="free800">800 freestyle</option>
+   <option value="free1500">1500 freestyle</option>
+				<option value="back50">50 backstroke</option> //back
+  <option value="back100">100 backstroke</option>
+  <option value="back200">200 backstroke</option>
+				<option value="breast50">50 breaststroke</option> //breast
+   <option value="breast100">100 breaststroke</option>
+   <option value="breast200">200 breaststroke</option>
+				<option value="fly50">50 butterfly</option> //fly
+  <option value="fly100">100 butterfly</option>
+  <option value="fly200">200 butterfly</option>
+				<option value="IM100">100 medley</option> //IM
+   <option value="IM200">200 medley</option>
+   <option value="IM400">400 medley</option>
+   
+   
+   <select>
+   <div><h4>Age:</h4><select name="Age">
+  <option value="age8">8</option>
+  <option value="age9">9</option>
+  <option value="age10">10</option>
+   <option value="age11">11</option>
+   <option value="age12">12</option>
+  <option value="age13">13</option>
+  <option value="age14">14</option>
+  <option value="age15">15</option>
+   <option value="age16">16</option>
+   <option value="age17">17</option>
+      <option value="age18">18</option>
+	  
+	  <select>
+   <div><h4>Gender:<h4><select name="gender">
+  <option value="boy">Male</option>
+  <option value="girl">Female</option>
+   
+
 </select></div>
- <div> YOUR TIME: <input type="text" name="timeOriginal"><br></div>
-  <div>YOUR GOAL: <input type="text" name="timeGoal"><br>
+ <div> Your time(in seconds): <input type="text" name="timeOriginal"><br></div>
+  <div>Your goal: <input type="text" name="timeGoal"><br>
     <div>Courses:<select name="Courses">
   <option value="longCourse">Long Course</option>
   <option value="shortCourse">Short Course </option>
@@ -31,24 +65,26 @@
 </form></div>
 
 
-<h3>Time Diference:</h3>
-<h3 id = 'timeDiference'></h3>
+<h3>You want to drop:</h3>
+<h3 id = 'timeDiference'></h3><h3>seconds</h3>
+
+
 </div>
 
 <script>
-function formParse(event){
-	event.preventDefault() 
-	var element = event.target
-	console.log(element)
-	console.log(element.timeOriginal.value)
-	var timeOriginal = (element.timeOriginal.value)
-	var timeGoal = (element.timeGoal.value)
+function formParse(event) {
+event.preventDefault() 
+var element = event.target
+console.log(element)
+console.log(element.timeOriginal.value)
+var timeOriginal = (element.timeOriginal.value)
+var timeGoal = (element.timeGoal.value)
 
 
-	var timeDiference = timeOriginal - timeGoal
-	console.log(timeDiference)
-	var displayTime = document.querySelector('#timeDiference')
-	displayTime.innerHTML = timeDiference
+var timeDiference = timeOriginal - timeGoal
+console.log(timeDiference)
+var displayTime = document.querySelector('#timeDiference')
+displayTime.innerHTML = timeDiference
 }
 var form = document.querySelector("form")
 console.log(form)
@@ -56,6 +92,13 @@ console.log(form)
 form.addEventListener("submit", formParse);
 </script>
 
+
+
+<div> How many days do you think it will take you to reach your goal? <input type="text" name="timeDays"><br></div>
+
+
+
+</script>
 
 
 
