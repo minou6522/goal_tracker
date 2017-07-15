@@ -90,11 +90,30 @@ var form = document.querySelector("form")
 console.log(form)
 
 form.addEventListener("submit", formParse);
+
+
 </script>
 
+<div> About how many days do you think it will take you to reach your goal? <input type="number" name="timeDays" id='timeDays'><br>
+
+<script>
+function enterFunction() {
 
 
-<div> How many days do you think it will take you to reach your goal? <input type="text" name="timeDays"><br></div>
+var timeindays = document.getElementById('timeDays').value;
+var timeinmilleseconds = timeindays * 24 * 60 * 60 * 1000;
+console.log(timeinmilleseconds);
+
+var goal = Date.now() + timeinmilleseconds;
+goal = Date.now(goal);
+console.log(goal);
+console.log(Date.now());
+console.log(Date.now()+timeinmilleseconds)
+console.log(Date(Date.now()+timeinmilleseconds))
+}
+
+</script>
+<button type='button' onclick = 'enterFunction()'>Enter</button>
 
 
 
