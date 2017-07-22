@@ -9,7 +9,7 @@
  
 
 <form>
-<div><h4>Events:</h4><select name="Events">
+<div><h4>Events:</h4><select name="Events" id="event">
   <option value="free50">50 freestyle</option> //free
   <option value="free100">100 freestyle</option>
   <option value="free200">200 freestyle</option>
@@ -28,7 +28,6 @@
 				<option value="IM100">100 medley</option> //IM
    <option value="IM200">200 medley</option>
    <option value="IM400">400 medley</option>
-   
    
    <select>
    <div><h4>Age:</h4><select name="Age">
@@ -101,25 +100,27 @@ function enterFunction() {
 
 
 var timeindays = document.getElementById('timeDays').value;
+timeindays = parseInt(timeindays); 
 var timeinmilleseconds = timeindays * 24 * 60 * 60 * 1000;
 console.log(timeinmilleseconds);
 
-var goal = Date.now() + timeinmilleseconds;
-goal = Date.now(goal);
-console.log(goal);
-console.log(Date.now());
-console.log(Date.now()+timeinmilleseconds)
-console.log(Date(Date.now()+timeinmilleseconds))
+var goal = new Date();
+console.log(goal.getDate());
+goal.setDate(goal.getDate() + timeindays);
+console.log(goal)
+
+
+
+document.getElementById('p1').innerHTML = goal.toDateString();
+
 }
 
 </script>
 <button type='button' onclick = 'enterFunction()'>Enter</button>
 
 
+<p id="p1"></p>
+
+
 
 </script>
-
-
-
- </body>
- </html>
