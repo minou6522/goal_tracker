@@ -3,13 +3,14 @@
 
  <title>Swim Tracker</title>
  </head>
- <body>
+ <body onload = 'myEvents()'>
  <h1>Swim Tracker</h1>
+ 
  
  
 
 <form>
-<div><h4>Events:</h4><select name="Events" id="event">
+<div><h4>Events:</h4><select  name="Events" id="event">
   <option value="free50">50 freestyle</option> //free
   <option value="free100">100 freestyle</option>
   <option value="free200">200 freestyle</option>
@@ -29,8 +30,11 @@
    <option value="IM200">200 medley</option>
    <option value="IM400">400 medley</option>
    
+  
+   
+   
    <select>
-   <div><h4>Age:</h4><select name="Age">
+   <div><h4>Age:</h4><select name="Age" id="age2">
   <option value="age8">8</option>
   <option value="age9">9</option>
   <option value="age10">10</option>
@@ -44,15 +48,15 @@
       <option value="age18">18</option>
 	  
 	  <select>
-   <div><h4>Gender:<h4><select name="gender">
+   <div><h4>Gender:<h4><select name="gender" id='genderr'>
   <option value="boy">Male</option>
   <option value="girl">Female</option>
    
 
 </select></div>
- <div> Your time(in seconds): <input type="text" name="timeOriginal"><br></div>
-  <div>Your goal: <input type="text" name="timeGoal"><br>
-    <div>Courses:<select name="Courses">
+ <div> Your time(in seconds): <input type="text" name="timeOriginal" id='tiime'><br></div>
+  <div>Your goal: <input type="text" name="timeGoal" id="gooal"><br>
+    <div>Courses:<select name="Courses" id='coource'>
   <option value="longCourse">Long Course</option>
   <option value="shortCourse">Short Course </option>
   
@@ -69,7 +73,21 @@
 
 
 </div>
+   <script>
 
+ function myEvents() {
+	document.getElementById('age2').value = localStorage.age;
+		document.getElementById('event').value = localStorage.events2;
+			document.getElementById('genderr').value = localStorage.gender;
+				document.getElementById('tiime').value = localStorage.time; 
+					document.getElementById('gooal').value = localStorage.goal;
+						document.getElementById('coource').value = localStorage.cource;
+							document.getElementById('timeDiference').value = localStorage.timedif;
+						
+  
+  
+ }
+   </script>
 <script>
 function formParse(event) {
 event.preventDefault() 
@@ -97,6 +115,10 @@ form.addEventListener("submit", formParse);
 
 <script>
 function enterFunction() {
+localStorage.events2 = document.getElementById('event').value;
+
+
+
 
 
 var timeindays = document.getElementById('timeDays').value;
