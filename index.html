@@ -54,8 +54,8 @@
    
 
 </select></div>
- <div> Your time(in seconds): <input type="text" name="timeOriginal" id='tiime'><br></div>
-  <div>Your goal: <input type="text" name="timeGoal" id="gooal"><br>
+ <div> Your time(in seconds): <input type="text" name="timeOriginal" style="color:blue;" id='tiime'><br></div>
+  <div>Your goal: <input type="text" style="color:blue;" name="timeGoal" id="gooal"><br>
     <div>Courses:<select name="Courses" id='coource'>
   <option value="longCourse">Long Course</option>
   <option value="shortCourse">Short Course </option>
@@ -111,11 +111,18 @@ form.addEventListener("submit", formParse);
 
 </script>
 
-<div> About how many days do you think it will take you to reach your goal? <input type="number" name="timeDays" id='timeDays'><br>
+<div> About how many days do you think it will take you to reach your goal? <input style="color:blue;" type="number" name="timeDays" id='timeDays'><br>
 
 <script>
 function enterFunction() {
 localStorage.events2 = document.getElementById('event').value;
+localStorage.age = document.getElementById('age2').value;
+localStorage.gender = document.getElementById('genderr').value;
+localStorage.time = document.getElementById('tiime').value;
+localStorage.goal = document.getElementById('gooal').value;
+localStorage.cource = document.getElementById('coource').value;
+localStorage.timeddif = document.getElementById('timeDifference').value;
+
 
 
 
@@ -138,11 +145,16 @@ document.getElementById('p1').innerHTML = goal.toDateString();
 }
 
 </script>
-<button type='button' onclick = 'enterFunction()'>Enter</button>
+<button style="color:blue;" background-color: powderblue; type='button' onclick = 'enterFunction()'>Enter</button>
 
 
 <p id="p1"></p>
 
 
-
-</script>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
