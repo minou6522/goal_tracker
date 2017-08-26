@@ -6,11 +6,10 @@
  <body onload = 'myEvents()'>
  <h1>Swim Tracker</h1>
  
- 
- 
 
+<h5>This is a site for swimmers who want to keep track of their times and set goals for their next meet</h5>
 <form>
-<div><h4>Events:</h4><select  name="Events" id="event">
+<div ><h3>Events:</h3><select  name="Events" id="event">
   <option value="free50">50 freestyle</option> //free
   <option value="free100">100 freestyle</option>
   <option value="free200">200 freestyle</option>
@@ -34,7 +33,7 @@
    
    
    <select>
-   <div><h4>Age:</h4><select name="Age" id="age2">
+   <div ><h3>Age:</h3><select name="Age" id="age2">
   <option value="age8">8</option>
   <option value="age9">9</option>
   <option value="age10">10</option>
@@ -48,15 +47,17 @@
       <option value="age18">18</option>
 	  
 	  <select>
-   <div><h4>Gender:<h4><select name="gender" id='genderr'>
+   <div><h3>Gender:<h3><select name="gender" id='genderr'>
   <option value="boy">Male</option>
   <option value="girl">Female</option>
    
 
 </select></div>
- <div> Your time(in seconds): <input type="text" name="timeOriginal" style="color:blue;" id='tiime'><br></div>
-  <div>Your goal: <input type="text" style="color:blue;" name="timeGoal" id="gooal"><br>
-    <div>Courses:<select name="Courses" id='coource'>
+<h4><div class="transbox"> Your time(in seconds): <input type="text" name="timeOriginal" style="color:blue;" id='tiime'><br></div></h4>
+
+  <h4><div>Your goal: <input type="text" style="color:blue;" name="timeGoal" id="gooal"><br></h4>
+  
+   <h4> <div>Courses:<select name="Courses" id='coource'></h4>
   <option value="longCourse">Long Course</option>
   <option value="shortCourse">Short Course </option>
   
@@ -68,8 +69,10 @@
 </form></div>
 
 
-<h3>You want to drop:</h3>
-<h3 id = 'timeDiference'></h3><h3>seconds</h3>
+
+<p id = 'You want to drop:'></p>
+<p id = 'timeDiference'></p><p id = 'seconds'></p>
+
 
 
 </div>
@@ -97,6 +100,13 @@ console.log(element.timeOriginal.value)
 var timeOriginal = (element.timeOriginal.value)
 var timeGoal = (element.timeGoal.value)
 
+document.getElementById('You want to drop:').innerHTML = 'You want to drop:'
+
+
+document.getElementById('seconds').innerHTML = 'seconds'
+
+
+
 
 var timeDiference = timeOriginal - timeGoal
 console.log(timeDiference)
@@ -111,7 +121,7 @@ form.addEventListener("submit", formParse);
 
 </script>
 
-<div> About how many days do you think it will take you to reach your goal? <input style="color:blue;" type="number" name="timeDays" id='timeDays'><br>
+<h4><div> About how many days do you think it will take you to reach your goal? <input style="color:blue;" type="number" name="timeDays" id='timeDays'><br></h4>
 
 <script>
 function enterFunction() {
@@ -130,8 +140,6 @@ localStorage.timedif = document.getElementById('timeDiference').value;
 
 var timeindays = document.getElementById('timeDays').value;
 timeindays = parseInt(timeindays); 
-var timeinmilleseconds = timeindays * 24 * 60 * 60 * 1000;
-console.log(timeinmilleseconds);
 
 var goal = new Date();
 console.log(goal.getDate());
@@ -139,22 +147,38 @@ goal.setDate(goal.getDate() + timeindays);
 console.log(goal);
 
 
-
+document.getElementById('p2').innerHTML = "You have until";
 document.getElementById('p1').innerHTML = goal.toDateString();
-
+document.getElementById('p3').innerHTML = "to complete your goal";
 }
 
 </script>
-<button style="color:blue;" background-color: powderblue; type='button' onclick = 'enterFunction()'>Enter</button>
+<button style="color:blue;"type='button' onclick = 'enterFunction()'>Enter</button>
 
-
+<p id="p2"></p>
 <p id="p1"></p>
+<p id="p3"></p>
 
 
 <head>
 <style>
-body {background-color: powderblue;}
-h1   {color: blue;}
+body {background-color: lightblue; text-align: center; background-image: url("wave.png")}
+h1   {color: darkblue;}
 p    {color: red;}
+div {color: black}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  }
+  div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+
+}
 </style>
 </head>
