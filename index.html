@@ -4,12 +4,12 @@
  <title>Swim Tracker</title>
  </head>
  <body onload = 'myEvents()'>
- <h1>Swim Tracker</h1>
+ <h1><div class= "transbox1">Swim Tracker</h1>
  
 
-<h5>This is a site for swimmers who want to keep track of their times and set goals for their next meet</h5>
+<h5><div class="transbox5">This is a site for swimmers who want to keep track of their times and set goals for their next meet</div></h5>
 <form>
-<div ><h3>Events:</h3><select  name="Events" id="event">
+<div class="transbox7" ><h3>Events:</h3><select  name="Events" id="event">
   <option value="free50">50 freestyle</option> //free
   <option value="free100">100 freestyle</option>
   <option value="free200">200 freestyle</option>
@@ -33,7 +33,7 @@
    
    
    <select>
-   <div ><h3>Age:</h3><select name="Age" id="age2">
+   <div class="transbox6"><h3>Age:</h3><select name="Age" id="age2">
   <option value="age8">8</option>
   <option value="age9">9</option>
   <option value="age10">10</option>
@@ -44,10 +44,10 @@
   <option value="age15">15</option>
    <option value="age16">16</option>
    <option value="age17">17</option>
-      <option value="age18">18</option>
+      <option value="age18">18</option></select>
+	  </div>
 	  
-	  <select>
-   <div><h3>Gender:<h3><select name="gender" id='genderr'>
+   <div class="transbox4"><h3>Gender:<h3><select name="gender" id='genderr'>
   <option value="boy">Male</option>
   <option value="girl">Female</option>
    
@@ -55,9 +55,9 @@
 </select></div>
 <h4><div class="transbox"> Your time(in seconds): <input type="text" name="timeOriginal" style="color:blue;" id='tiime'><br></div></h4>
 
-  <h4><div>Your goal: <input type="text" style="color:blue;" name="timeGoal" id="gooal"><br></h4>
+  <h4><div class="transbox2">Your goal: <input type="text" style="color:blue;" name="timeGoal" id="gooal"><br></h4>
   
-   <h4> <div>Courses:<select name="Courses" id='coource'></h4>
+   <h4> <div class="transbox3">Courses:<select name="Courses" id='coource'></h4>
   <option value="longCourse">Long Course</option>
   <option value="shortCourse">Short Course </option>
   
@@ -66,7 +66,7 @@
   <input type="submit" value="Submit">
 
 </div>
-</form></div>
+</form>
 
 
 
@@ -167,18 +167,115 @@ h1   {color: darkblue;}
 p    {color: red;}
 div {color: black}
 
+
+
+
 div.transbox {
-  margin: 30px;
+top: 40%;
+right: 10px;
+text-align: center;
+ 
+
+
+
+  margin-left: 230px;
+  margin-right: 230px;
   background-color: #ffffff;
   border: 1px solid black;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+
   }
-  div.transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
+  div.transbox2 {
+top: 40%;
+right: 10px;
+text-align: center;
+ 
+
+
+
+  margin-left: 230px;
+  margin-right: 230px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+  
+  div.transbox1 {
+top: 0.0000001%;
+right: 30%;
+
+
+  
+    margin-left: 230px;
+  margin-right: 230px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=70); //title
+  
+  
 
 }
+div.transbox5 {
+top: 20%;
+right: 40%;
+
+
+  
+    margin-left: 230px;
+  margin-right: 230px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=70); //cources
+  }
+  div.transbox4 {
+
+right: 40%;
+
+
+  
+    margin-left: 340px;
+  margin-right: 340px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=70); //gender
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+    div.transbox6 {
+
+
+
+
+  
+   right: 40%;
+
+
+  
+    margin-left: 340px;
+  margin-right: 340px;
+margin-top: 50px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.7;
+  filter: alpha(opacity=70); //age
+  
+}
+  
+
+  
+  
 </style>
 </head>
+
